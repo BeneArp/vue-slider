@@ -8,6 +8,7 @@ const {createApp} = Vue;
 createApp({
     data(){
         return{
+            activeCover: 0,
             slides: [
                 {
                     image: 'img/01.webp',
@@ -40,5 +41,7 @@ createApp({
                 }
             ]
         };
-    }
+    },
+
 }).mount("#app")
+
