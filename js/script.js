@@ -49,6 +49,14 @@ createApp({
             if(this.activeCover > this.slides.length - 1){
                 this.activeCover = 0;
             }
+        },
+
+        prevCover(){
+            this.activeCover--;
+
+            if(this.activeCover < 0){
+                this.activeCover = this.slides.length - 1;
+            }
         }
     }
 }).mount("#app")
