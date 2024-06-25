@@ -43,5 +43,13 @@ createApp({
         };
     },
 
+    methods:{
+        nextCover(){
+            this.activeCover++;
+            if(this.activeCover > this.slides.length - 1){
+                this.activeCover = 0;
+            }
+        }
+    }
 }).mount("#app")
 
