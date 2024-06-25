@@ -34,8 +34,8 @@
                 <div class="thumbs">
                     <div class="prev" @click="prevCover"></div>
                     <div class="next" @click="nextCover"></div>
-                    <div class="thumb active">
-                        <img :src="game.image" :alt="game.title" v-for="game in slides">
+                    <div class="thumb" v-for="(game, index) in slides" :class="activeCover === index ? 'active' : '' ">
+                        <img :src="game.image" :alt="game.title">
                     </div>
                     <!-- <div class="thumb">
                         <img src="img/02.webp" alt="Ratchet & Clank" />
